@@ -32,6 +32,10 @@ public class Product {
     mappedBy = "product")
     private List<Image> images;
 
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @JoinColumn
+    private User user;
+
     private Long previewImageId;
 
 
@@ -46,6 +50,14 @@ public class Product {
         if (review == null) reviews = new ArrayList<>();
         review.setProduct(this);
         reviews.add(review);
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void addImageToProduct(Image image) {

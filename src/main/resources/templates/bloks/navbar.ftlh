@@ -21,7 +21,7 @@
                 </div>
             </li>
         </ul>
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Войти</button>
+        <button class="btn btn-light my-2 my-sm-0" type="button" onclick="window.location.href = '/login'">Войти</button>
 
         <#--        <div class="dropdown text-end">-->
         <#--            <a href="/profile" >-->
