@@ -1,10 +1,15 @@
 package com.example.waikan.services;
 
+import com.example.waikan.models.Image;
 import com.example.waikan.models.User;
 import com.example.waikan.models.enums.Role;
 import com.example.waikan.repositories.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 @Service
 public class UserService {

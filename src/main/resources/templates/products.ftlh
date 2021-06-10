@@ -12,6 +12,9 @@
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">${product.price}</p>
                     </div>
+                    <div class="card-footer">
+                        ${product.user.nikName}
+                    </div>
                 </div>
             </a>
         <#else>
@@ -53,6 +56,8 @@
             <label for="image3">Третья фотография к товару</label>
             <input type="file" class="form-control-file" id="image3" name="file3">
         </div>
+        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+
         <button type="submit" style="width: 100%" class="btn btn-outline-dark">Добавить</button>
     </form>
 </@c.page>

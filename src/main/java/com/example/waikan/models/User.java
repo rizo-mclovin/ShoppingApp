@@ -6,10 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "users")
@@ -25,7 +22,11 @@ public class User implements UserDetails {
     @NotBlank
     private String nikName;
     private boolean active;
-    
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "iamge_id")
+    private Image avatar;
+
     private String password;
     @Transient
     private String confirmPassword;
@@ -39,6 +40,28 @@ public class User implements UserDetails {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
     mappedBy = "user")
     private List<Product> products;
+
+    public void addProductToUser(Product product) {
+        if (products == null) products = new ArrayList<>();
+        product.setUser(this);
+        products.add(product);
+    }
+
+    public Image getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(Image avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
 
     public Long getId() {
         return id;

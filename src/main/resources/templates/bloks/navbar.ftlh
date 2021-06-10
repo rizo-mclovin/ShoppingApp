@@ -1,11 +1,7 @@
+<#include "security.ftlh"/>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Waikan</a>
-    <button class="navbar-toggler collapsed" type="button"
-            data-toggle="collapse" data-target="#navbarsExample03"
-            aria-controls="navbarsExample03" aria-expanded="false"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+
     <div class="navbar-collapse collapse" id="navbarsExample03" style="">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -21,12 +17,17 @@
                 </div>
             </li>
         </ul>
-        <button class="btn btn-light my-2 my-sm-0" type="button" onclick="window.location.href = '/login'">Войти</button>
+        <#if user??>
+            <div class="dropdown text-end">
+                <a href="/profile">
+                    <img src="/image/1" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+            </div>
+        <#else>
+            <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="button" onclick="window.location.href = '/login'">Войти
+            </button>
+        </#if>
 
-        <#--        <div class="dropdown text-end">-->
-        <#--            <a href="/profile" >-->
-        <#--                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">-->
-        <#--            </a>-->
-        <#--        </div>-->
+
     </div>
 </nav>

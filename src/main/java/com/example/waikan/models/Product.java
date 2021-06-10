@@ -21,9 +21,6 @@ public class Product {
     @Column(nullable = false)
     private String price;
 
-    @Column(nullable = false)
-    private String author;
-
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
     mappedBy = "product")
     private List<Review> reviews;
@@ -104,14 +101,6 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public List<Review> getReviews() {

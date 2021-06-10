@@ -20,6 +20,6 @@
             <input type="password" class="form-control" id="password" name="password">
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <button type="submit" style="width: 100%" class="btn btn-dark">Зарегистрироваться</button>
+        <button type="submit" style="width: 100%" class="btn btn-outline-dark btn-sm">Зарегистрироваться</button>
     </form>
 </@c.page>

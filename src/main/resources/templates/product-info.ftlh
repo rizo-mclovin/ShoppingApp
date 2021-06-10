@@ -39,6 +39,8 @@
     <hr>
     <p><h1>${product.name} | ${product.price}</h1></p>
     <p>${product.description}</p>
+    <i>${product.user.nikName}</i>
+
     <hr>
     <h1 style="text-align: center">Отзывы к товару</h1>
     <hr>
@@ -56,6 +58,8 @@
             <label for="text">Ваш отзыв</label>
             <input type="text" class="form-control" id="text" name="text">
         </div>
+        <input type="hidden" name="_csrf" value="${_csrf.token}">
+
         <button type="submit" style="width: 100%" class="btn btn-outline-dark">Добавить</button>
     </form>
     <hr>

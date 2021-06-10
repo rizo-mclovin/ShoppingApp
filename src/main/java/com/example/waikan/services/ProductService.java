@@ -4,6 +4,7 @@ import com.example.waikan.facades.ImageFacade;
 import com.example.waikan.models.Image;
 import com.example.waikan.models.Product;
 import com.example.waikan.models.Review;
+import com.example.waikan.models.User;
 import com.example.waikan.repositories.ImageRepository;
 import com.example.waikan.repositories.ProductRepository;
 import com.example.waikan.repositories.ReviewRepository;
@@ -41,9 +42,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public void saveProduct(Product product, MultipartFile file1, MultipartFile file2,
+    public void saveProduct(User user, Product product, MultipartFile file1, MultipartFile file2,
                             MultipartFile file3)
             throws IOException {
+        product.setUser(user);
         Image image1;
         Image image2;
         Image image3;
@@ -67,7 +69,7 @@ public class ProductService {
             product.addImageToProduct(image3);
         }
         log.info("Saving new Product. Name: {}, Description: {}, Author: {}",
-                product.getName(), product.getDescription(), product.getAuthor());
+                product.getName(), product.getDescription(), product.getUser().getNikName());
         Product productFromDb = productRepository.save(product);
         productFromDb.setPreviewImageId(productFromDb.getImages().get(0).getId());
         productRepository.save(product);
