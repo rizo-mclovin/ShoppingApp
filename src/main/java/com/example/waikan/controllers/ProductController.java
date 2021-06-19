@@ -69,9 +69,8 @@ public class ProductController {
 
     @GetMapping("/my/products")
     public String userProduct(@AuthenticationPrincipal User user, Model model) {
-        List<Product> userProducts = user.getProducts();
+        Iterable<Product> userProducts = user.getProducts();
         model.addAttribute("products", userProducts);
-        model.addAttribute("productsCount", userProducts.size());
         return "my-products";
     }
 }
