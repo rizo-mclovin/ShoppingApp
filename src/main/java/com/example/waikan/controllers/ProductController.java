@@ -9,18 +9,13 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.Valid;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 @PreAuthorize("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
@@ -47,16 +42,11 @@ public class ProductController {
                               @RequestParam("file1") MultipartFile file1,
                               @RequestParam("file2") MultipartFile file2,
                               @RequestParam("file3") MultipartFile file3,
-                              @Valid Product product, BindingResult result, Model model)
+                              Product product, Model model)
             throws IOException {
-        Map<String, String> errors = responseErrorValidation.mapValidationService(result);
-        if (errors != null) {
-            model.mergeAttributes(errors);
-            return "products";
-        } else {
-            productService.saveProduct(user, product, file1, file2, file3);
-            return "redirect:/";
-        }
+
+        productService.saveProduct(user, product, file1, file2, file3);
+        return "redirect:/my/products";
     }
 
     @GetMapping("/product/{id}")
@@ -69,8 +59,7 @@ public class ProductController {
 
     @GetMapping("/my/products")
     public String userProduct(@AuthenticationPrincipal User user, Model model) {
-        Iterable<Product> userProducts = user.getProducts();
-        model.addAttribute("products", userProducts);
+        model.addAttribute("products", productService.getProductsByUserId(user.getId()));
         return "my-products";
     }
 }

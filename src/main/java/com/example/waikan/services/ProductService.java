@@ -130,5 +130,8 @@ public class ProductService {
         return outputStream.toByteArray();
     }
 
+    public List<Product> getProductsByUserId(Long userId) {
+        return productRepository.getProductsByUserId(userId);
+    }
 
 }

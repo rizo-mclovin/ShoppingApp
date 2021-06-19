@@ -5,9 +5,10 @@ import com.example.waikan.services.UserService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/profile")
@@ -21,9 +22,19 @@ public class UserController {
     @GetMapping
     public String profile(@AuthenticationPrincipal User user,
                           Model model) {
-        model.addAttribute("user", user);
-        model.addAttribute("products", user.getProducts());
-        model.addAttribute("avatar", user.getAvatar());
+        User updateUser = userService.getUpdateUserFromDb(user);
+        model.addAttribute("user", updateUser);
+        model.addAttribute("avatar", updateUser.getAvatar());
         return "profile";
+    }
+
+    @PostMapping("/edit")
+    public String editProfile(
+            @RequestParam("email") String email,
+            @RequestParam("nikName") String nikName,
+            @RequestParam("phoneNumber") String phoneNumber,
+            @RequestParam("file") MultipartFile avatar) throws IOException {
+        userService.editProfile(nikName, phoneNumber, avatar, email);
+        return "redirect:/profile";
     }
 }

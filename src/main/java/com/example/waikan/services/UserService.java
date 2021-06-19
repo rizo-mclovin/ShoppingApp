@@ -1,5 +1,7 @@
 package com.example.waikan.services;
 
+import com.example.waikan.facades.ImageFacade;
+import com.example.waikan.models.Image;
 import com.example.waikan.models.User;
 import com.example.waikan.models.enums.Role;
 import com.example.waikan.repositories.UserRepository;
@@ -8,10 +10,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.UUID;
+import java.util.zip.Deflater;
 
 @Service
 public class UserService {
@@ -24,13 +31,15 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final MailSender mailSender;
+    private final ImageFacade imageFacade;
 
     public UserService(UserRepository userRepository,
                        PasswordEncoder passwordEncoder,
-                       MailSender mailSender) {
+                       MailSender mailSender, ImageFacade imageFacade) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.mailSender = mailSender;
+        this.imageFacade = imageFacade;
     }
 
     public boolean createUser(User user) {
@@ -42,6 +51,11 @@ public class UserService {
 
         sendEmailMessage(user.getEmail(), user.getActivationCode(), user.getNikName());
         return true;
+    }
+
+    public User getUpdateUserFromDb(User user) {
+        return userRepository.findById(user.getId())
+                .orElse(null);
     }
 
     private void sendEmailMessage(String userEmail, String activationCode, String nikName) {
@@ -69,4 +83,36 @@ public class UserService {
         } else return false;
     }
 
+    public void editProfile(String nikName, String phoneNumber, MultipartFile avatar, String email) throws IOException {
+        User userFromDb = userRepository.findByEmail(email);
+        if (userFromDb == null) throw new UsernameNotFoundException("Email " + email + " is not found");
+        userFromDb.setNikName(nikName);
+        userFromDb.setNumberPhone(phoneNumber);
+        Image imageAvatar = imageFacade.toEntity(avatar);
+        imageAvatar.setBytes(compressBytes(imageAvatar.getBytes()));
+        userFromDb.setAvatar(imageAvatar);
+        log.info("Edit user: " + userFromDb.getEmail());
+        userRepository.save(userFromDb);
+    }
+
+
+    private byte[] compressBytes(byte[] data) {
+        Deflater deflater = new Deflater();
+        deflater.setInput(data);
+        deflater.finish();
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
+        byte[] buffer = new byte[1024];
+        while (!deflater.finished()) {
+            int count = deflater.deflate(buffer);
+            outputStream.write(buffer, 0, count);
+        }
+        try {
+            outputStream.close();
+        } catch (IOException e) {
+            log.error("Cannot compress Bytes");
+        }
+        System.out.println("Compressed Image Byte Size - "
+                + outputStream.toByteArray().length);
+        return outputStream.toByteArray();
+    }
 }

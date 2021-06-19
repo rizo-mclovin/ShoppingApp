@@ -15,9 +15,6 @@ public class ImageFacade {
         image.setContentType(file.getContentType());
         image.setSize(file.getSize());
         image.setBytes(file.getBytes());
-        for (int i = 0; i < file.getBytes().length; i++) {
-            System.out.print(file.getBytes()[i]);
-        }
         return image;
     }
 }
