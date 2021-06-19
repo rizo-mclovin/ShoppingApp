@@ -18,6 +18,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -63,5 +65,13 @@ public class ProductController {
         model.addAttribute("reviews", product.getReviews());
         model.addAttribute("images", product.getImages());
         return "product-info";
+    }
+
+    @GetMapping("/my/products")
+    public String userProduct(@AuthenticationPrincipal User user, Model model) {
+        List<Product> userProducts = user.getProducts();
+        model.addAttribute("products", userProducts);
+        model.addAttribute("productsCount", userProducts.size());
+        return "my-products";
     }
 }
