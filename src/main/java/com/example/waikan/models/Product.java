@@ -1,6 +1,8 @@
 package com.example.waikan.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +14,17 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Size(max = 150, message = "Поле название товара не должно превышать 150 символов")
+    @NotBlank(message = "Поле название товара не должно быть пустым")
     @Column(nullable = false)
     private String name;
 
+    @Size(max = 1000, message = "Поле описание товара не должно превышать 1000 символов")
+    @NotBlank(message = "Поле описание товара не должно быть пустым")
     @Column(nullable = false, columnDefinition = "text")
     private String description;
 
+    @NotBlank(message = "Поле цена товара не должно быть пустым")
     @Column(nullable = false)
     private String price;
 

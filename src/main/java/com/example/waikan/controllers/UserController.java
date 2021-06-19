@@ -22,6 +22,8 @@ public class UserController {
     public String profile(@AuthenticationPrincipal User user,
                           Model model) {
         model.addAttribute("user", user);
+        model.addAttribute("products", user.getProducts());
+        model.addAttribute("avatar", user.getAvatar());
         return "profile";
     }
 }

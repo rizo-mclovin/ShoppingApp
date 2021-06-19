@@ -10,4 +10,5 @@ public class WaikanApplication {
         SpringApplication.run(WaikanApplication.class, args);
     }
 
+
 }
