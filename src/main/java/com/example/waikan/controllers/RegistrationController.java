@@ -4,10 +4,9 @@ import com.example.waikan.models.User;
 import com.example.waikan.services.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 
 @Controller
 public class RegistrationController {
@@ -18,21 +17,29 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
-    public String registerNewUser(User user, Model model) {
+    public String registerNewUser(Principal principal, User user, Model model) {
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
         boolean registrationWasSuccessful = userService.createUser(user);
         if (!registrationWasSuccessful) {
             model.addAttribute("user", user);
             model.addAttribute("errorRegistration", "Пользователь уже существует");
             return "registration";
         } else {
-            model.addAttribute("nikName", user.getNikName());
-            model.addAttribute("email", user.getEmail());
-            return "register-succssesfully";
+            return "redirect:/register-succssesfully?name="+ user.getNikName() + "&email=" + user.getEmail();
         }
     }
 
+    @GetMapping("/register-succssesfully")
+    public String registerSuccssesfully(Principal principal, @RequestParam String name, @RequestParam String email,
+                                        Model model) {
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
+        model.addAttribute("email", email);
+        return "register-succssesfully";
+    }
+
     @GetMapping("/activate/{code}")
-    public String activateUser(Model model, @PathVariable("code") String code) {
+    public String activateUser(Principal principal, Model model, @PathVariable("code") String code) {
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
         if (userService.activateUser(code)) {
             model.addAttribute("activate", true);
         } else {
@@ -42,5 +49,14 @@ public class RegistrationController {
     }
 
     @GetMapping("/registration")
-    public String registration() { return "registration"; }
+    public String registration(Principal principal, Model model) {
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
+        return "registration";
+    }
+
+    @GetMapping("/login")
+    public String login(Principal principal, Model model) {
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
+        return "login";
+    }
 }

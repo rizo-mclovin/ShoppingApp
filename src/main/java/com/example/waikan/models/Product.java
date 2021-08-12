@@ -28,9 +28,8 @@ public class Product {
     @Column(nullable = false)
     private String price;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
-    mappedBy = "product")
-    private List<Review> reviews;
+    @Column(nullable = false)
+    private String city;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
     mappedBy = "product")
@@ -48,12 +47,6 @@ public class Product {
     @PrePersist
     private void onCreated() {
         dateOfCreated = LocalDateTime.now();
-    }
-
-    public void addReviewToProduct(Review review) {
-        if (review == null) reviews = new ArrayList<>();
-        review.setProduct(this);
-        reviews.add(review);
     }
 
     public User getUser() {
@@ -110,14 +103,6 @@ public class Product {
         this.description = description;
     }
 
-    public List<Review> getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
-
     public LocalDateTime getDateOfCreated() {
         return dateOfCreated;
     }
@@ -132,5 +117,13 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

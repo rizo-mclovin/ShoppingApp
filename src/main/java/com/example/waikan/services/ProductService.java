@@ -3,11 +3,9 @@ package com.example.waikan.services;
 import com.example.waikan.facades.ImageFacade;
 import com.example.waikan.models.Image;
 import com.example.waikan.models.Product;
-import com.example.waikan.models.Review;
 import com.example.waikan.models.User;
 import com.example.waikan.repositories.ImageRepository;
 import com.example.waikan.repositories.ProductRepository;
-import com.example.waikan.repositories.ReviewRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -15,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
@@ -26,26 +25,91 @@ public class ProductService {
     private final ProductRepository productRepository;
     private final ImageRepository imageRepository;
     private final ImageFacade imageFacade;
-    private final ReviewRepository reviewRepository;
 
     public ProductService(ProductRepository productRepository,
                           ImageRepository imageRepository,
-                          ImageFacade imageFacade,
-                          ReviewRepository reviewRepository) {
+                          ImageFacade imageFacade) {
         this.productRepository = productRepository;
         this.imageRepository = imageRepository;
         this.imageFacade = imageFacade;
-        this.reviewRepository = reviewRepository;
     }
 
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    private static byte[] decompressBytes(byte[] data) {
+        Inflater inflater = new Inflater();
+        inflater.setInput(data);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
+        byte[] buffer = new byte[1024];
+        try {
+            while (!inflater.finished()) {
+                int count = inflater.inflate(buffer);
+                outputStream.write(buffer, 0, count);
+            }
+            outputStream.close();
+        } catch (IOException | DataFormatException e) {
+            log.error("Cannot decompress Bytes");
+        }
+        return outputStream.toByteArray();
+    }
+
+    public List<Product> getAllProducts(String searchWord, String searchCity) {
+        List<Product> products = productRepository.findAll();
+        if (!searchWord.equals("") && !searchCity.equals("")) {
+            return products;
+        }
+        if (!searchWord.equals("")) {
+            products = searchBySearchWord(searchWord, products);
+        }
+        if (!searchCity.equals("")) {
+            products.removeIf(m -> !m.getCity().equals(searchCity));
+        }
+        return products;
+    }
+
+    private List<Product> searchBySearchWord(String searchWord, List<Product> products) {
+        List<Product> searchProducts = new ArrayList<>();
+        String lowerSearchWord = makeStringToLowerCase(searchWord);
+        char[] searchWordToCharArray = lowerSearchWord.toCharArray();
+        for (int a = 0; a < products.size(); a++) {
+            String lowerProductName = makeStringToLowerCase(products.get(a).getName());
+            char[] chars = lowerProductName.toCharArray();
+            for (int i = 0; i < chars.length; i++) {
+                for (int j = 0; j < searchWordToCharArray.length; j++) {
+                    try {
+                        if (chars[i] == searchWordToCharArray[j]) {
+                            if (chars[i + 1] == searchWordToCharArray[j + 1]) {
+                                if (chars[i + 2] == searchWordToCharArray[j + 2]) {
+                                    if (chars[i + 3] == searchWordToCharArray[j + 3]) {
+                                        if (!searchProducts.contains(products.get(a))) {
+                                            searchProducts.add(products.get(a));
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } catch (IndexOutOfBoundsException e) {
+                        break;
+                    }
+                }
+            }
+        }
+        return searchProducts;
+    }
+
+    private String makeStringToLowerCase(String word) {
+        String lowerString = "";
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            lowerString += Character.toLowerCase(c);
+        }
+        return lowerString;
     }
 
     public void saveProduct(User user, Product product, MultipartFile file1, MultipartFile file2,
                             MultipartFile file3)
             throws IOException {
         product.setUser(user);
+        product.setPrice(product.getPrice() + " ₽");
         Image image1;
         Image image2;
         Image image3;
@@ -72,6 +136,7 @@ public class ProductService {
                 product.getName(), product.getDescription(), product.getUser().getNikName());
         Product productFromDb = productRepository.save(product);
         productFromDb.setPreviewImageId(productFromDb.getImages().get(0).getId());
+
         productRepository.save(product);
     }
 
@@ -80,34 +145,6 @@ public class ProductService {
                 .orElse(null);
         image.setBytes(decompressBytes(image.getBytes()));
         return image;
-    }
-
-    public void addReviewToProduct(Review review, Long productId) {
-        Product product = productRepository.findById(productId)
-                .orElse(null);
-        if (product != null) {
-            product.addReviewToProduct(review);
-            productRepository.save(product);
-        } else {
-            log.error("Product with id {} is not found", productId);
-        }
-    }
-
-    private static byte[] decompressBytes(byte[] data) {
-        Inflater inflater = new Inflater();
-        inflater.setInput(data);
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
-        byte[] buffer = new byte[1024];
-        try {
-            while (!inflater.finished()) {
-                int count = inflater.inflate(buffer);
-                outputStream.write(buffer, 0, count);
-            }
-            outputStream.close();
-        } catch (IOException | DataFormatException e) {
-            log.error("Cannot decompress Bytes");
-        }
-        return outputStream.toByteArray();
     }
 
     private byte[] compressBytes(byte[] data) {
@@ -132,6 +169,21 @@ public class ProductService {
 
     public List<Product> getProductsByUserId(Long userId) {
         return productRepository.getProductsByUserId(userId);
+    }
+
+    public void deleteProduct(User user, Long id) {
+        Product product = productRepository.findById(id)
+                .orElse(null);
+        if (product != null) {
+            if (product.getUser().getId().equals(user.getId())) {
+                productRepository.delete(product);
+                log.info("Product with id = {} was deleted", id);
+            } else {
+                log.error("User: {} haven't this product with id = {}", user.getEmail(), id);
+            }
+        } else {
+            log.error("Product with id = {} is not found", id);
+        }
     }
 
 }

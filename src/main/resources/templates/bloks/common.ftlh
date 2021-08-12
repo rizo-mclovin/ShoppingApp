@@ -1,8 +1,9 @@
-<#macro page isMainPage>
+<#import "navbar.ftlh" as n>
+<#macro page isMainPage user>
     <!doctype html>
     <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/static/style.css">
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +16,7 @@
         <title>Waikan</title>
     </head>
     <body>
-    <#include "navbar.ftlh"/>
+    <@n.navbar user/>
     <#if isMainPage>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">

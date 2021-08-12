@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.security.Principal;
 import java.util.UUID;
 import java.util.zip.Deflater;
 
@@ -59,7 +60,7 @@ public class UserService {
     }
 
     private void sendEmailMessage(String userEmail, String activationCode, String nikName) {
-        String messageText = String.format("Привет, %s!" +
+        String messageText = String.format("Здраствуйте, %s!" +
                 " Благодарим вас за проявленный интерес к торговой площадке Waikan." +
                 " Чтобы активировать ваш аккаунт нужно перейти по ссылке %s", nikName,
                 hostName + "activate/" + activationCode);
@@ -88,9 +89,11 @@ public class UserService {
         if (userFromDb == null) throw new UsernameNotFoundException("Email " + email + " is not found");
         userFromDb.setNikName(nikName);
         userFromDb.setNumberPhone(phoneNumber);
-        Image imageAvatar = imageFacade.toEntity(avatar);
-        imageAvatar.setBytes(compressBytes(imageAvatar.getBytes()));
-        userFromDb.setAvatar(imageAvatar);
+        if (avatar.getSize() != 0) {
+            Image imageAvatar = imageFacade.toEntity(avatar);
+            imageAvatar.setBytes(compressBytes(imageAvatar.getBytes()));
+            userFromDb.setAvatar(imageAvatar);
+        }
         log.info("Edit user: " + userFromDb.getEmail());
         userRepository.save(userFromDb);
     }
@@ -114,5 +117,14 @@ public class UserService {
         System.out.println("Compressed Image Byte Size - "
                 + outputStream.toByteArray().length);
         return outputStream.toByteArray();
+    }
+
+    public User getUserByPrincipal(Principal principal) {
+        User defaultUser = new User();
+        if (principal == null) return defaultUser;
+        String name = principal.getName();
+        User user = userRepository.findByEmail(name);
+        if (user == null) return defaultUser;
+        return user;
     }
 }

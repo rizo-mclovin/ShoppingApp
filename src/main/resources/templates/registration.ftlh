@@ -1,10 +1,10 @@
 <#import "bloks/common.ftlh" as c>
-<@c.page false>
+<@c.page false user>
     <h1 style="text-align: center">Регистрация</h1>
     <hr>
     <form action="/registration" method="post">
         <div class="form-group">
-            <label for="nikName">Никнейм</label>
+            <label for="nikName">Имя пользователя</label>
             <input type="text" class="form-control" id="nikName" name="nikName">
         </div>
         <div class="form-group">
@@ -20,6 +20,6 @@
             <input type="password" class="form-control" id="password" name="password">
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <button type="submit" style="width: 100%" class="btn btn-outline-dark btn-sm">Зарегистрироваться</button>
+        <button type="submit" style="width: 100%" class="btn btn-dark">Зарегистрироваться</button>
     </form>
 </@c.page>

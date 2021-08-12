@@ -3,7 +3,7 @@ package com.example.waikan.controllers;
 import com.example.waikan.models.Product;
 import com.example.waikan.models.User;
 import com.example.waikan.services.ProductService;
-import com.example.waikan.validation.ResponseErrorValidation;
+import com.example.waikan.services.UserService;
 import org.springframework.mail.MailSender;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -16,24 +16,32 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.security.Principal;
 
 @Controller
 @PreAuthorize("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
 public class ProductController {
     private final MailSender mailSender;
-    private final ResponseErrorValidation responseErrorValidation;
     private final ProductService productService;
+    private final UserService userService;
 
-    public ProductController(MailSender mailSender, ResponseErrorValidation responseErrorValidation,
-                             ProductService productService) {
+    public ProductController(MailSender mailSender,
+                             ProductService productService,
+                             UserService userService) {
         this.mailSender = mailSender;
-        this.responseErrorValidation = responseErrorValidation;
         this.productService = productService;
+        this.userService = userService;
     }
 
     @GetMapping("/")
-    public String products(Model model) {
-        model.addAttribute("products", productService.getAllProducts());
+    public String products(@RequestParam(required = false, defaultValue = "") String searchCity,
+                           @RequestParam(required = false, defaultValue = "") String searchWord,
+                           Principal principal, Model model) {
+        model.addAttribute("towns", ControllerUtils.getAllTowns());
+        model.addAttribute("searchWord", searchWord);
+        model.addAttribute("searchCity", searchCity);
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
+        model.addAttribute("products", productService.getAllProducts(searchWord, searchCity));
         return "products";
     }
 
@@ -42,24 +50,35 @@ public class ProductController {
                               @RequestParam("file1") MultipartFile file1,
                               @RequestParam("file2") MultipartFile file2,
                               @RequestParam("file3") MultipartFile file3,
-                              Product product, Model model)
+                              Product product)
             throws IOException {
-
         productService.saveProduct(user, product, file1, file2, file3);
         return "redirect:/my/products";
     }
 
     @GetMapping("/product/{id}")
-    public String product(@PathVariable("id") Product product, Model model) {
+    public String product(@PathVariable("id") Product product, Principal principal, Model model) {
+        model.addAttribute("user", userService.getUserByPrincipal(principal));
         model.addAttribute("product", product);
-        model.addAttribute("reviews", product.getReviews());
         model.addAttribute("images", product.getImages());
+        model.addAttribute("authorProduct", product.getUser());
         return "product-info";
     }
 
     @GetMapping("/my/products")
-    public String userProduct(@AuthenticationPrincipal User user, Model model) {
+    public String userProduct(Principal principal, Model model) {
+        User user = userService.getUserByPrincipal(principal);
+        model.addAttribute("user", user);
+        model.addAttribute("towns", ControllerUtils.getAllTowns());
+
         model.addAttribute("products", productService.getProductsByUserId(user.getId()));
         return "my-products";
+    }
+
+    @PostMapping("/product/delete/{id}")
+    public String deleteProduct(@AuthenticationPrincipal User user,
+                                @PathVariable("id") Long id) {
+        productService.deleteProduct(user, id);
+        return "redirect:/my/products";
     }
 }

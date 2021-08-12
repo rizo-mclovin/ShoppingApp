@@ -1,5 +1,5 @@
 <#import "bloks/common.ftlh" as c>
-<@c.page false>
+<@c.page false user>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <#list images as image>
@@ -37,45 +37,16 @@
         </a>
     </div>
     <hr>
-    <p><h1>${product.name} | ${product.price}</h1></p>
-    <p>${product.description}</p>
-    <i>${product.user.nikName}</i>
+    <p><h1 style="text-align: center">${product.name} | ${product.price}</h1></p>
+    <p style="text-align: center">${product.description}</p>
+    <p style="text-align: center">Номер телефона продавца: <b>${authorProduct.numberPhone}</b></p>
 
     <hr>
-    <h1 style="text-align: center">Отзывы к товару</h1>
-    <hr>
-    <form action="/review/create" method="post">
-        <input type="hidden" value="${product.id}" name="productId">
-        <div class="form-group">
-            <label for="name">Ваше имя</label>
-            <input type="text" class="form-control" id="name" name="name">
-        </div>
-        <div class="form-group">
-            <label for="rating">Оцените по 10 бальной шкале</label>
-            <input type="number" class="form-control" id="rating" name="rating">
-        </div>
-        <div class="form-group">
-            <label for="text">Ваш отзыв</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div>
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <p style="text-align: center">
+        <a href="/user/${authorProduct.id}">
+            <img src="<#if authorProduct.avatar??>/image/${authorProduct.avatar.id}<#else>/img/avatar.png</#if>" alt="mdo" width="32" height="32" class="rounded-circle"> ${authorProduct.nikName}
+        </a>
+    </p>
 
-        <button type="submit" style="width: 100%" class="btn btn-outline-dark">Добавить</button>
-    </form>
-    <hr>
-    <div class="card-columns">
-        <#list reviews as review>
-            <div class="card text-white bg-dark my-3 product" style="max-width: 100%;">
-                <div class="card-body">
-                    <h5 class="card-title">${review.text}</h5>
-                    <p class="card-text <#if review.rating < 5>text-danger</#if>">${review.rating}</p>
-                </div>
-                <div class="card-footer">
-                    ${review.name}
-                </div>
-            </div>
-        <#else>
-            <p style="text-align: center"><h4>Отзывов к данному товару нет</h4></p>
-        </#list>
-    </div>
+
 </@c.page>
