@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maktub</string>
+    <string name="resend">Tekrar gönder</string>
+    <string name="enter_your_name">Adınızı girin</string>
+    <string name="signIn">Girmek</string>
+    <string name="enter_your_phone">Numaranızı girin</string>
+    <string name="enter_your_email">E-posta adresinizi girin</string>
+    <string name="confirm_your_password">Şifrenizi tekrar girin</string>
+    <string name="welcome">Hoş geldiniz!</string>
+    <string name="email">E-posta</string>
+    <string name="signUp">Kayıt</string>
+    <string name="sign_up">Kayıt</string>
+    <string name="fill_out_the_forms_to_continue">Devam etmek için tüm satırları doldurun</string>
+    <string name="verify">Doğrulamak</string>
+    <string name="verify_number">Numarayı onaylayın</string>
+    <string name="skip">Atla</string>
+    <string name="phone">Telefon numarası</string>
+    <string name="enter_code_sent_to">Numaraya gönderilen kodu onaylayın:</string>
+    <string name="password">Parola</string>
+    <string name="have_account">Zaten bir hesabım var</string>
+    <string name="don_t_receive_the_code">Kodu almadınız mı?</string>
+    <string name="sign_in">Giriş</string>
+    <string name="hi_there">Merhaba!</string>
+    <string name="welcome_to_this_app_nplease_sign_in_to_ncontinue">Maktub\'a hoş geldiniz\ndevam etmek için\ngiriş yapın</string>
+    <string name="forgot">Şifreyi unuttunuz mu?</string>
+</resources>

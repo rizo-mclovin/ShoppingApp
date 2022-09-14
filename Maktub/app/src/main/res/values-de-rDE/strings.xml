@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maktub</string>
+    <string name="signUp"><u>Eintragung</u></string>
+    <string name="signIn"><u>Hereinkommen</u></string>
+    <string name="forgot"><u>Passwort vergessen?</u></string>
+    <string name="have_account"><u>Ich habe bereits ein Konto</u></string>
+    <string name="password">Passwort</string>
+    <string name="email">E-Mail</string>
+    <string name="enter_your_name">Geben Sie Ihren Namen</string>
+    <string name="enter_your_email">Enter your email address</string>
+    <string name="don_t_receive_the_code">Code nicht erhalten?</string>
+    <string name="sign_up">Eintragung</string>
+    <string name="welcome">Willkommen!</string>
+    <string name="skip">Verpassen</string>
+    <string name="hi_there">Hallo!</string>
+    <string name="welcome_to_this_app_nplease_sign_in_to_ncontinue">Willkommen bei Maktub\nMelden Sie sich an\num fortzufahren</string>
+    <string name="fill_out_the_forms_to_continue">Füllen Sie alle Zeilen aus, um fortzufahren</string>
+    <string name="enter_your_phone">Geben Sie Ihre Nummer</string>
+    <string name="confirm_your_password">Geben Sie Ihr Passwort erneut</string>
+    <string name="verify">Bestätigen</string>
+    <string name="verify_number">Bestätigen Sie die Nummer</string>
+    <string name="enter_code_sent_to">Bestätigen Sie den an die Nummer gesendeten Code:</string>
+    <string name="phone">Telefonnummer</string>
+    <string name="sign_in"><u>Eingang</u></string>
+    <string name="resend">Erneut senden</string>
+</resources>

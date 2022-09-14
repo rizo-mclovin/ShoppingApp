@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maktub</string>
+    <string name="signUp"><u>Регистрация</u></string>
+    <string name="signIn">Войти</string>
+    <string name="sign_in"><u>Вход</u></string>
+    <string name="forgot"><u>Забыли пароль?</u></string>
+    <string name="have_account"><u>У меня уже есть аккаунт</u></string>
+    <string name="password">Пароль</string>
+    <string name="email">Электронная почта</string>
+    <string name="enter_your_name">Введите свое имя</string>
+    <string name="enter_your_email">Введите свой адрес электронной почты</string>
+    <string name="don_t_receive_the_code">Не получили код?</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="skip">Пропустить</string>
+    <string name="hi_there">Привет!</string>
+    <string name="welcome_to_this_app_nplease_sign_in_to_ncontinue">Добро пожаловать в Maktub войдите в систему, чтобы продолжить</string>
+    <string name="fill_out_the_forms_to_continue">Заполните все строки, чтобы продолжить</string>
+    <string name="enter_your_phone">Введите свой номер</string>
+    <string name="confirm_your_password">Введите свой пароль ещё раз</string>
+    <string name="verify">Подтвердить</string>
+    <string name="verify_number">Подтвердите номер</string>
+    <string name="enter_code_sent_to">Подтвердите код отправленный на номер:</string>
+    <string name="phone">Номер телефона</string>
+    <string name="resend">Отправить повторно</string>
+</resources>

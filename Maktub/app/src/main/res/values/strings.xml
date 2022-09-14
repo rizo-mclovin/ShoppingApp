@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Maktub</string>
+    <string name="signUp"><u>Sign up</u></string>
+    <string name="signIn"><u>Sign in</u></string>
+    <string name="sign_in"><u>Sign in</u></string>
+    <string name="forgot"><u>Forgot Password</u></string>
+    <string name="have_account"><u>I have already account</u></string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="don_t_receive_the_code">Don\'t receive the code?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="welcome">Welcome!</string>
+    <string name="skip">Skip</string>
+    <string name="hi_there">Hi There!</string>
+    <string name="welcome_to_this_app_nplease_sign_in_to_ncontinue">welcome to Maktub\nplease sign in\nto continue</string>
+    <string name="fill_out_the_forms_to_continue">Fill out the lines to continue!</string>
+    <string name="enter_your_phone">Enter your phone</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="verify">Verify</string>
+    <string name="verify_number">Verify Number</string>
+    <string name="enter_code_sent_to">Enter code sent to</string>
+    <string name="phone">Phone</string>
+    <string name="resend">Resend Code</string>
+</resources>

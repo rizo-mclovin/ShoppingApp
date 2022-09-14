@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "126368036058",
+    "project_id": "maktub-391e1",
+    "storage_bucket": "maktub-391e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126368036058:android:d01734117076bd09c021e3",
+        "android_client_info": {
+          "package_name": "com.example.familychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126368036058-rgu0rbn66kbhgfvl0gqjec2lbff32o9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.familychat",
+            "certificate_hash": "7757355450d25ac7688496551193852c33db6309"
+          }
+        },
+        {
+          "client_id": "126368036058-c2bet14lm0hdushoaglkvcl0f5cqrock.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXMUm3UqP3vSleZjkcoY-itscXI58cUL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126368036058-c2bet14lm0hdushoaglkvcl0f5cqrock.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
