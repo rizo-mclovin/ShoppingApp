@@ -1,25 +1,28 @@
 package ru.connor.FirstSecurityApp.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import ru.connor.FirstSecurityApp.model.Person;
 
 import java.util.Collection;
+import java.util.Collections;
+
 
 @Component
 public class PersonDetails implements UserDetails {
 
     private final Person person;
 
+    @Autowired
     public PersonDetails(Person person) {
         this.person = person;
     }
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return Collections.emptyList();
     }
 
     @Override
@@ -34,25 +37,21 @@ public class PersonDetails implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
-    }
-
-    public Person person(){
-        return this.person;
+        return true;
     }
 }

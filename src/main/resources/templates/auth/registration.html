@@ -2,10 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
-
+    <title>Registration</title>
 </head>
 <body>
-Hello from First Spring Security App
+
+<form th:method="POST" th:action="@{/auth/register}" th:object="${person}">
+
+</form>
+
 </body>
 </html>

@@ -7,6 +7,6 @@ import ru.connor.FirstSecurityApp.model.Person;
 import java.util.Optional;
 
 @Repository
-public interface PersonRepository extends JpaRepository<Person, Integer> {
+public interface PersonDetailsRepository extends JpaRepository<Person, Integer> {
     Optional<Person> findByName(String name);
 }
