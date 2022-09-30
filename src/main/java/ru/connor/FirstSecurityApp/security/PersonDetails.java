@@ -2,6 +2,7 @@ package ru.connor.FirstSecurityApp.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import ru.connor.FirstSecurityApp.model.Person;
@@ -10,19 +11,16 @@ import java.util.Collection;
 import java.util.Collections;
 
 
-@Component
 public class PersonDetails implements UserDetails {
-
     private final Person person;
 
-    @Autowired
     public PersonDetails(Person person) {
         this.person = person;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.emptyList();
+        return Collections.singletonList(new SimpleGrantedAuthority(person.getRole()));
     }
 
     @Override
@@ -32,7 +30,7 @@ public class PersonDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.person.getName();
+        return this.person.getUsername();
     }
 
     @Override
@@ -53,5 +51,10 @@ public class PersonDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    // Нужно, чтобы получать данные аутентифицированного пользователя
+    public Person getPerson() {
+        return this.person;
     }
 }
