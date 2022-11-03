@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<h1 th:text="${student.get().getFullStudentName()}"></h1>
+<hr>
+<form th:method="DELETE" th:action="@{/students/{id}(id=${student.get().getId()})}">
+    <input type="submit" value="Delete">
+</form>
+</body>
+</html>

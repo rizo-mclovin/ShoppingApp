@@ -27,8 +27,13 @@
     </style>
 </head>
 <body>
+<form th:action="@{/choiceBooksOrStudents}" th:method="GET" style="text-align: center">
+    <input class="btn" type="submit" value="Get Started!">
+</form>
+<br>
 <form th:action="@{/logout}" th:method="POST" style="text-align: center">
     <h2> Successfully Login!</h2>
+
     <input class="btn" type="submit" value="Logout">
 </form>
 </body>

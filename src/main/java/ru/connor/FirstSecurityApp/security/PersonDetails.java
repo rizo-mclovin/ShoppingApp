@@ -1,36 +1,34 @@
 package ru.connor.FirstSecurityApp.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
-import ru.connor.FirstSecurityApp.model.Person;
+import ru.connor.FirstSecurityApp.model.Administration;
 
 import java.util.Collection;
 import java.util.Collections;
 
 
 public class PersonDetails implements UserDetails {
-    private final Person person;
+    private final Administration administration;
 
-    public PersonDetails(Person person) {
-        this.person = person;
+    public PersonDetails(Administration administration) {
+        this.administration = administration;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority(person.getRole()));
+//        return Collections.singletonList(new SimpleGrantedAuthority(administration.getRole()));
+        return Collections.emptyList();
     }
 
     @Override
     public String getPassword() {
-        return this.person.getPassword();
+        return this.administration.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return this.person.getUsername();
+        return this.administration.getUsername();
     }
 
     @Override
@@ -54,7 +52,7 @@ public class PersonDetails implements UserDetails {
     }
 
     // Нужно, чтобы получать данные аутентифицированного пользователя
-    public Person getPerson() {
-        return this.person;
+    public Administration getPerson() {
+        return this.administration;
     }
 }
