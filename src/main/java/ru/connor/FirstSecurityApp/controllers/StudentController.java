@@ -53,7 +53,7 @@ public class StudentController {
         return "main/students/edit";
     }
 
-    @PatchMapping("/{id}")
+    @PostMapping("/edit/{id}")
     public String update(@ModelAttribute("student") @Valid Student student, BindingResult bindingResult, @PathVariable("id") int id) {
         if (bindingResult.hasErrors()){
             return "main/students/edit";}

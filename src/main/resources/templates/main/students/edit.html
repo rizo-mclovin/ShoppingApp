@@ -5,13 +5,13 @@
     <title>Изменения данных студента</title>
 </head>
 <body>
-<form th:action="@{/students/{id}(id=${student.getId()})}" th:method="PATCH" th:object="${student}">
+<form th:action="@{/students/edit/{id}(id=${student.getId()})}" th:method="PATCH" th:object="${student}">
     <label for="fullStudentName">Enter FullName: </label>
-    <input type="text" name="fullStudentName" id="fullStudentName">
+    <input type="text" th:field="*{fullStudentName}" id="fullStudentName">
     <br>
     <!--    <div style="color: red" th:if="${#fields.hasErrors('fullStudentName')}" th:errors="*{fullStudentName}">Error Name</div>-->
     <label for="className">Enter Class Name: </label>
-    <input type="text" name="className" id="className">
+    <input type="text" th:field="*{className}" id="className">
     <!--    <div style="color: red" th:if="${#fields.hasErrors('className')}" th:errors="*{className}">ClassName Error</div>-->
     <input type="submit" value="Update">
 </form>

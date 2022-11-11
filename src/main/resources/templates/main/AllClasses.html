@@ -7,7 +7,7 @@
 <body>
 Выберите класс
 <div th:each="student : ${students}">
-    <p th:text="${student.getFullStudentName()} "></p>
+    <a th:href="@{/students/{id}(id=${student.getId()})}" th:text="${student.getFullStudentName()} "></a>
 </div>
 
 <hr>

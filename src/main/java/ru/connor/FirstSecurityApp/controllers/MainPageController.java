@@ -23,10 +23,10 @@ public class MainPageController {
         return "main/choice";
     }
 
-    @GetMapping("/books")
-    public String showAllBooks() {
-        return "main/books";
-    }
+//    @GetMapping("/books")
+//    public String showAllBooks() {
+//        return "main/books";
+//    }
 
 
 }
