@@ -1,0 +1,15 @@
+ru/connor/FirstSecurityApp/services/StudentService.class
+ru/connor/FirstSecurityApp/util/PersonValidator.class
+ru/connor/FirstSecurityApp/config/SecurityConfig.class
+ru/connor/FirstSecurityApp/model/Administration.class
+ru/connor/FirstSecurityApp/model/Student.class
+ru/connor/FirstSecurityApp/security/PersonDetails.class
+ru/connor/FirstSecurityApp/controllers/MainPageController.class
+ru/connor/FirstSecurityApp/controllers/AuthController.class
+ru/connor/FirstSecurityApp/controllers/StudentController.class
+ru/connor/FirstSecurityApp/services/PersonDetailsService.class
+ru/connor/FirstSecurityApp/services/RegistrationService.class
+ru/connor/FirstSecurityApp/repository/StudentsRepository.class
+ru/connor/FirstSecurityApp/model/Book.class
+ru/connor/FirstSecurityApp/FirstSecurityAppApplication.class
+ru/connor/FirstSecurityApp/repository/PeopleRepository.class
