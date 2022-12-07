@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+</head>
+<body>
+<p th:text="'Название продукта: ' + ${product.getTitle()}"></p>
+<p th:text="'Цена: ' + ${product.getPrice()}"></p>
+<p th:text="'Продовец: ' + ${product.getAuthor()}"></p>
+<p th:text="'Город: ' + ${product.getCity()}"></p>
+<p th:text="'Описание: ' + ${product.getDescription()}"></p>
+</body>
+
+<form th:action="@{/product/delete/{id}(id=${product.getId()})}" th:method="DELETE">
+    <input type="submit" value="DELETE">
+</form>
+</html>

@@ -1,5 +1,7 @@
-# SpringSecurityApp 
-Lesson Project from Nail Alishev 
-# SchoolProject
-# SchoolProject
-# SchoolProject
+# Shopping App
+
+### Added functions
+
+- Working with the product (GET, POST, DELETE methods) without photographs 
+
+- Fixed Bugs

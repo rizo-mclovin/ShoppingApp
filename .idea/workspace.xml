@@ -4,7 +4,98 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47fa484f-cfd5-428e-be16-afa364c6097f" name="Changes" comment="" />
+    <list default="true" id="47fa484f-cfd5-428e-be16-afa364c6097f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/contoller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054f4921-a398-4590-bf38-888a5b05ac54.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054f4921-a398-4590-bf38-888a5b05ac54/storage_v2/_src_/database/school_db.KfESCA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054f4921-a398-4590-bf38-888a5b05ac54/storage_v2/_src_/database/school_db.KfESCA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054f4921-a398-4590-bf38-888a5b05ac54/storage_v2/_src_/database/school_db.KfESCA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054f4921-a398-4590-bf38-888a5b05ac54/storage_v2/_src_/database/school_db.KfESCA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/controllers/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/controllers/BooksController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/controllers/MainPageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/controllers/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Administration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/repository/BooksRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/repository/PeopleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/repository/StudentsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/security/PersonDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/services/BookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/services/PersonDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/services/RegistrationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/services/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/util/PersonValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/successReg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/AllClasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/books.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/books/all-books.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/books/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/books/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/choice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/students/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/students/errorPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/students/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/students/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FirstSecurityApp-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FirstSecurityApp-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FirstSecurityApp-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FirstSecurityApp-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/FirstSecurityAppApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/FirstSecurityAppApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/controllers/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/controllers/BooksController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/controllers/MainPageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/controllers/StudentController 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/controllers/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/model/Administration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/model/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/repository/BooksRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/repository/PeopleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/repository/StudentsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/security/PersonDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/services/BookService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/services/PersonDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/services/RegistrationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/services/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/util/PersonValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/successReg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/AllClasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/books.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/books/all-books.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/books/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/books/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/choice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/students/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/students/errorPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/students/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/students/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.connor.FirstSecurityApp.FirstSecurityAppApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.connor.FirstSecurityApp.FirstSecurityAppApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ru.connor.FirstSecurityApp.FirstSecurityAppApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ru.connor.FirstSecurityApp.FirstSecurityAppApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/connor/FirstSecurityApp/FirstSecurityAppApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/connor/FirstSecurityApp/FirstSecurityAppApplicationTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,13 +114,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.5.1/spring-boot-autoconfigure-2.5.1.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/config/SecurityConfig.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/controllers/AuthController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/controllers/MainPageController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Student.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/services/StudentService.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/templates/hello.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/templates/main/AllClasses.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -57,6 +141,11 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="temurin-11" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2Fo04Ly9yMTlFoI5ju36MgujiDF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -76,20 +165,26 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dora/Documents/SchoolProject",
+    "last_opened_file_path": "/Users/dora/Desktop/shopping_app",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "089be74d9a254bbd323c65f4236f5948"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "spring.configuration.checksum": "22e7dad30e98a95cc88c3a297b6bb388"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "postgresql"
+      "postgresql",
+      "mysql"
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="Изменения" />
@@ -104,7 +199,15 @@
   </component>
   <component name="RunManager" selected="Spring Boot.FirstSecurityAppApplication (1)">
     <configuration name="FirstSecurityAppApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="SchoolProject" />
+      <option name="ACTIVE_PROFILES" />
+      <module name="FirstSecurityApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.connor.FirstSecurityApp.FirstSecurityAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstSecurityAppApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shopping_app" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.connor.FirstSecurityApp.FirstSecurityAppApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,6 +289,10 @@
       <workItem from="1667741158353" duration="1156000" />
       <workItem from="1667995491691" duration="11254000" />
       <workItem from="1668247777416" duration="1092000" />
+      <workItem from="1670385108929" duration="4804000" />
+      <workItem from="1670399677869" duration="356000" />
+      <workItem from="1670404488352" duration="3377000" />
+      <workItem from="1670414654331" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1668248851129</created>
