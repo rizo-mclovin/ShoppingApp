@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47fa484f-cfd5-428e-be16-afa364c6097f" name="Changes" comment="" />
+    <list default="true" id="47fa484f-cfd5-428e-be16-afa364c6097f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/contoller/ImageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/repository/ImagesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5825ae9-d76e-47cc-bd07-3503b53ab313.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d5825ae9-d76e-47cc-bd07-3503b53ab313.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/contoller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/contoller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/contoller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/contoller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/FirstSecurityApp/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product/list.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +47,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.5.1/spring-boot-autoconfigure-2.5.1.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Image.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/model/Product.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/repository/ImagesRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp/service/ProductService.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -73,6 +101,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/dora/Desktop/shopping_app",
     "nodejs_package_manager_path": "npm",
@@ -109,7 +138,7 @@
   <component name="RunManager" selected="Spring Boot.FirstSecurityAppApplication (1)">
     <configuration name="FirstSecurityAppApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
-      <module name="FirstSecurityApp" />
+      <module name="shopping_app" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.connor.FirstSecurityApp.FirstSecurityAppApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,7 +230,8 @@
       <workItem from="1670385108929" duration="4804000" />
       <workItem from="1670399677869" duration="356000" />
       <workItem from="1670404488352" duration="3377000" />
-      <workItem from="1670414654331" duration="566000" />
+      <workItem from="1670414654331" duration="974000" />
+      <workItem from="1670487414157" duration="10623000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1668248851129</created>

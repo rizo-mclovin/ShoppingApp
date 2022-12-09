@@ -14,13 +14,17 @@
     <input type="submit" value="Поиск">
 </form>
 
+<!--/*@thymesVar id="products" type="ru"*/-->
+
 <div th:each="product : ${products}">
+
+    <!--/*@thymesVar id="product" type="ru.connor.FirstSecurityApp.model.Product"*/-->
     <a th:text="${product.getTitle()} + ' ' + ${product.getPrice()} + 'руб.'" th:href="@{/product/{id}(id=${product.getId()})}">Подробнее..</a>
 </div>
 
 <h1>Создать новый товар</h1>
 
-<form th:method="POST" th:action="@{/product/create}">
+<form th:method="POST" th:action="@{/product/create}" enctype="multipart/form-data">
     <label for="title1">Название продукта: </label>
     <input type="text" name="title" id="title1">
     <br>
@@ -36,7 +40,16 @@
     <label for="author">Ваше Имя: </label>
     <input type="text" name="author" id="author">
     <br>
-    <input type="submit" value="Create!">
+    <label for="file1">Изоброжение: </label>
+    <input type="file" name="file1" id="file1">
+    <br>
+    <label for="file2">Изоброжение: </label>
+    <input type="file" name="file2" id="file2">
+    <br>
+    <label for="file3">Изоброжение: </label>
+    <input type="file" name="file3" id="file3">
+    <br>
+    <input type="submit" value="Добавить Товар!">
 </form>
 </body>
 </html>

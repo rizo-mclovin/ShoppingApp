@@ -1028,36 +1028,107 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="297" parent="288" name="product">
+    <table id="297" parent="288" name="hibernate_sequence">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="298" parent="297" name="id">
+    <table id="298" parent="288" name="image">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="299" parent="288" name="product">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="300" parent="297" name="next_val">
+      <DataType>bigint|0s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="301" parent="298" name="id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="299" parent="297" name="author">
-      <DataType>varchar(255)|0s</DataType>
+    <column id="302" parent="298" name="bytes">
+      <DataType>longblob|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="300" parent="297" name="city">
+    <column id="303" parent="298" name="content_type">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="301" parent="297" name="description">
-      <DataType>text|0s</DataType>
+    <column id="304" parent="298" name="is_preview_image">
+      <DataType>bit(1)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="302" parent="297" name="price">
-      <DataType>int|0s</DataType>
+    <column id="305" parent="298" name="name">
+      <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="303" parent="297" name="title">
+    <column id="306" parent="298" name="original_file_name">
       <DataType>varchar(255)|0s</DataType>
       <Position>6</Position>
     </column>
-    <key id="304" parent="297" name="PRIMARY">
+    <column id="307" parent="298" name="size">
+      <DataType>bigint|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="308" parent="298" name="product_id">
+      <DataType>bigint|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="309" parent="298" name="FKgpextbyee3uk9u6o2381m7ft1">
+      <ColNames>product_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>product</RefTableName>
+    </foreign-key>
+    <index id="310" parent="298" name="FKgpextbyee3uk9u6o2381m7ft1">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="311" parent="298" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="312" parent="299" name="id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="313" parent="299" name="author">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="314" parent="299" name="city">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="315" parent="299" name="description">
+      <DataType>text|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="316" parent="299" name="price">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="317" parent="299" name="title">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="318" parent="299" name="date_of_created">
+      <DataType>datetime(6)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="319" parent="299" name="preview_image_id">
+      <DataType>bigint|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="320" parent="299" name="data_of_created">
+      <DataType>datetime(6)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <key id="321" parent="299" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
