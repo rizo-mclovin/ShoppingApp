@@ -18,7 +18,7 @@
 
 <div th:each="product : ${products}">
 
-    <!--/*@thymesVar id="product" type="ru.connor.FirstSecurityApp.model.Product"*/-->
+    <!--/*@thymesVar id="product" type="ru.connor.shopping_app.model.Product"*/-->
     <a th:text="${product.getTitle()} + ' ' + ${product.getPrice()} + 'руб.'" th:href="@{/product/{id}(id=${product.getId()})}">Подробнее..</a>
 </div>
 

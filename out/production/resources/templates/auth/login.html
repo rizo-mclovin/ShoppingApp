@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h4>Log in</h4>
+<form action="/login" method="post">
+    <label for="email">Email: </label>
+    <input type="text" name="email" id="email">
+    <label for="password">Пароль: </label>
+    <input type="text" name="password" id="password">
+    <input type="hidden" name="_csrf" th:value="${_csrf.token}">
+    <input type="submit" value="Login">
+
+
+</form>
+
+<a href="/registration">Registration</a>
+</body>
+</html>

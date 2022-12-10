@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.alishev.springcourse</groupId>
-    <artifactId>FirstSecurityApp</artifactId>
+    <artifactId>shopping_app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SchoolProject</name>
     <description>School Project with Spring Framework</description>

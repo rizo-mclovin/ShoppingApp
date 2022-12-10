@@ -11,9 +11,8 @@
 <img th:src="@{/image/{id}(id=${product.getImages().get(2).getId()})}" height="60px">
 
 
-
-<!--/*@thymesVar id="fuckingImages" type="ru.connor.FirstSecurityApp.model.Image"*/-->
-<!--/*@thymesVar id="product" type="ru.connor.FirstSecurityApp.model.Product"*/-->
+<!--/*@thymesVar id="fuckingImages" type="ru.connor.shopping_app.model.Image"*/-->
+<!--/*@thymesVar id="product" type="ru.connor.shopping_app.model.Product"*/-->
 <p th:text="'Название продукта: ' + ${product.getTitle()}"></p>
 <p th:text="'Цена: ' + ${product.getPrice()}"></p>
 <p th:text="'Продовец: ' + ${product.getAuthor()}"></p>
@@ -21,7 +20,7 @@
 <p th:text="'Описание: ' + ${product.getDescription()}"></p>
 </body>
 
-<!--/*@thymesVar id="product" type="ru.connor.FirstSecurityApp.model.Product"*/-->
+<!--/*@thymesVar id="product" type="ru.connor.shopping_app.model.Product"*/-->
 <form th:action="@{/product/delete/{id}(id=${product.getId()})}" th:method="DELETE">
     <input type="submit" value="DELETE">
 </form>
