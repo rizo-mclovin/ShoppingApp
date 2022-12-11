@@ -5,12 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fa484f-cfd5-428e-be16-afa364c6097f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/MvcConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/login.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/template.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5825ae9-d76e-47cc-bd07-3503b53ab313.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d5825ae9-d76e-47cc-bd07-3503b53ab313.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ProfileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/security/UserSecurityDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ProfileController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/security/UserSecurityDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/auth/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/list.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +154,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/auth" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
   </component>
@@ -225,7 +273,7 @@
       <workItem from="1670399677869" duration="356000" />
       <workItem from="1670404488352" duration="3377000" />
       <workItem from="1670414654331" duration="974000" />
-      <workItem from="1670487414157" duration="27224000" />
+      <workItem from="1670487414157" duration="40188000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1668248851129</created>
