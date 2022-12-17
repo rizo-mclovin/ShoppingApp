@@ -1,26 +1,40 @@
 package ru.connor.shopping_app.model;
 
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import ru.connor.shopping_app.model.enums.Role;
 
 import javax.persistence.*;
 import java.util.*;
 
 @Entity
 @Table(name = "users")
+@AllArgsConstructor
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true, updatable = false)
     private String email;
-    private String phoneNumber;
-    private String name;
+    private String firstName;
+    private String lastName;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn
-    private Image avatar;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     private boolean active;
     private String activationCode;
     @Column(length = 1000)
@@ -36,6 +50,10 @@ public class User implements UserDetails {
             mappedBy = "user")
     private List<Product> products = new ArrayList<>();
 
+    public User(User user) {}
+
+    public User() {}
+
     public void addProductToUser(Product product) {
         product.setUser(this);
         products.add(product);
@@ -43,14 +61,6 @@ public class User implements UserDetails {
 
     public boolean isAdmin() {
         return roles.contains(Role.ROLE_ADMIN);
-    }
-
-    public Image getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(Image avatar) {
-        this.avatar = avatar;
     }
 
     public List<Product> getProducts() {
@@ -75,22 +85,6 @@ public class User implements UserDetails {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public boolean isActive() {

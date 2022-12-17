@@ -5,69 +5,117 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fa484f-cfd5-428e-be16-afa364c6097f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/MvcConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/login.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/auth/registration.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/template.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/SpringSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/dto/ProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/global/GlobalData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/security/CustomUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/adminHome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/categoriesAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/orderPlaced.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/productsAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/viewProduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d5825ae9-d76e-47cc-bd07-3503b53ab313.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d5825ae9-d76e-47cc-bd07-3503b53ab313.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ProfileController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/MvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/MvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ImageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/contoller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Image.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/enums/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/ImagesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/security/UserSecurityDetails.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ProfileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/login.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth/registration.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/template.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/my-products.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-edit.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-info.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FirstSecurityApp-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FirstSecurityApp-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/config/MvcConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/config/MvcConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ImageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/contoller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Image.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/model/enums/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/repository/ImagesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/repository/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/security/UserSecurityDetails.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/CustomUserDetailsService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/connor/shopping_app/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/product/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/login.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/registration.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/blocks/template.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/my-products.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product-info.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/products.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user-edit.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user-info.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.connor.FirstSecurityApp.FirstSecurityAppApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ru.connor.FirstSecurityApp.FirstSecurityAppApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/connor/FirstSecurityApp/FirstSecurityAppApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -77,10 +125,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.5.1/spring-boot-autoconfigure-2.5.1.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Image.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/model/Product.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/repository/ImagesRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/ru/connor/shopping_app/service/ProductService.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -134,23 +178,28 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dora/Desktop/shopping_app",
+    "last_opened_file_path": "/Users/dora/Desktop/shopping_app/src/main/resources/static/images",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "spring.configuration.checksum": "22e7dad30e98a95cc88c3a297b6bb388"
+    "service.view.auto.scroll.to.source": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "af0e9a36f0fd620a78d6d4332abe5ae3"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql",
-      "mysql"
+      "mysql",
+      "h2"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/ru/connor/FirstSecurityApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -273,7 +322,9 @@
       <workItem from="1670399677869" duration="356000" />
       <workItem from="1670404488352" duration="3377000" />
       <workItem from="1670414654331" duration="974000" />
-      <workItem from="1670487414157" duration="40188000" />
+      <workItem from="1670487414157" duration="66617000" />
+      <workItem from="1671192601738" duration="1336000" />
+      <workItem from="1671194052930" duration="15393000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1668248851129</created>

@@ -1,38 +1,43 @@
 package ru.connor.shopping_app.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Entity
 @Table(name = "Product")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
-    private String title;
-    private String description;
-    private Integer price;
-    private String city;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
-            mappedBy = "product")
-    private List<Image> images = new ArrayList<>();
+    @Column(name = "name")
+    private String name;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", referencedColumnName = "category_id")
+    private Category category;
+    @Column(name = "price")
+    private double price;
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
-    @JoinColumn
+    @JoinColumn(name = "user")
     private User user;
-    private Long previewImageId;
+    @Column(name = "weight")
+    private double weight;
+    @Column(name = "description")
+    private String description;
+    @Column(name = "image_name")
+    private String imageName;
     private LocalDateTime dateOfCreated;
 
     @PrePersist
     private void onCreate() { dateOfCreated = LocalDateTime.now(); }
 
-
-    public void addImageToProduct(Image image) {
-        image.setProduct(this);
-        images.add(image);
-    }
 }

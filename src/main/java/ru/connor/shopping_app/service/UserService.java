@@ -1,13 +1,11 @@
 package ru.connor.shopping_app.service;
 
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import ru.connor.shopping_app.model.Role;
 import ru.connor.shopping_app.model.User;
-import ru.connor.shopping_app.model.enums.Role;
 import ru.connor.shopping_app.repository.UserRepository;
 
 import java.security.Principal;
@@ -16,7 +14,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 
 @Service
 @Slf4j
@@ -29,6 +26,8 @@ public class UserService {
         String email = user.getEmail();
         if (userRepository.findByEmail(email) != null) return false;
         user.setActive(true);
+        user.setFirstName(user.getFirstName());
+        user.setLastName(user.getLastName());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.getRoles().add(Role.ROLE_USER);
         log.info("Saving new User with email: {}", email);
@@ -41,7 +40,7 @@ public class UserService {
     }
 
     public void banUser(Long id) {
-        User user = userRepository.findById(id).orElse(null);
+        User user = userRepository.findById(Math.toIntExact(id)).orElse(null);
         if (user != null) {
             if (user.isActive()) {
                 user.setActive(false);
