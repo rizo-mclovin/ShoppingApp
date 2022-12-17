@@ -28,7 +28,6 @@ public class CartController {
         model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice).sum());
         model.addAttribute("cart", GlobalData.cart);
         return "cart";
-
-
     }
+
 }

@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ShoppingApp" />
         <module name="FirstSecurityApp" />
         <module name="SchoolProject" />
         <module name="shopping_app" />
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="FirstSecurityApp" options="-parameters" />
       <module name="SchoolProject" options="-parameters" />
+      <module name="ShoppingApp" options="-parameters" />
       <module name="shopping_app" options="-parameters" />
     </option>
   </component>

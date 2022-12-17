@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import ru.connor.shopping_app.global.GlobalData;
+import ru.connor.shopping_app.model.Product;
 import ru.connor.shopping_app.service.CategoryService;
 import ru.connor.shopping_app.service.ProductService;
 
@@ -41,8 +42,22 @@ public class HomeController {
     @GetMapping("/shop/viewproduct/{id}")
     public String viewProduct(@PathVariable int id, Model model){
         model.addAttribute("product", productService.getProductById(id).get());
+        model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice));
         model.addAttribute("cartCount", GlobalData.cart.size());
 
         return "viewProduct";
     }
+
+    @GetMapping("/cart/removeItem/{index}")
+    public String removeItem(@PathVariable int index){
+        GlobalData.cart.remove(index);
+        return "redirect:/cart";
+    }
+
+    @GetMapping("/checkout")
+    public String checkout(Model model){
+        model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice));
+        return "checkout";
+    }
+
 }

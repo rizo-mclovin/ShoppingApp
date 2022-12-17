@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "Users")
 @AllArgsConstructor
 public class User implements UserDetails {
     @Id
@@ -16,7 +16,9 @@ public class User implements UserDetails {
     private Long id;
     @Column(unique = true, updatable = false)
     private String email;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
 
     public String getFirstName() {
@@ -36,8 +38,7 @@ public class User implements UserDetails {
     }
 
     private boolean active;
-    private String activationCode;
-    @Column(length = 1000)
+    @Column(name = "password")
     private String password;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
@@ -95,13 +96,6 @@ public class User implements UserDetails {
         this.active = active;
     }
 
-    public String getActivationCode() {
-        return activationCode;
-    }
-
-    public void setActivationCode(String activationCode) {
-        this.activationCode = activationCode;
-    }
 
     public void setPassword(String password) {
         this.password = password;
