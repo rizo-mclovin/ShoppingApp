@@ -13,7 +13,7 @@
               integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
               crossorigin="anonymous">
 
-        <title>Waikan</title>
+        <title>BUYSELL</title>
     </head>
     <body>
     <@n.navbar user/>
@@ -51,7 +51,7 @@
                     <div class="container">
                         <div class="carousel-caption">
 
-                            <h2>Waikan</h2>
+                            <h2>BUYSELL</h2>
                         </div>
                     </div>
                 </div>

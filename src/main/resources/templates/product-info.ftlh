@@ -42,6 +42,12 @@
     <p style="text-align: center">Номер телефона продавца: <b>${authorProduct.numberPhone}</b></p>
 
     <hr>
+
+    <form method="post" action="/addToCart/${product.id}">
+        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+        <input type="submit" value="Добавить в корзину">
+    </form>
+    <hr>
     <p style="text-align: center">
         <a href="/user/${authorProduct.id}">
             <img src="<#if authorProduct.avatar??>/image/${authorProduct.avatar.id}<#else>/img/avatar.png</#if>" alt="mdo" width="32" height="32" class="rounded-circle"> ${authorProduct.nikName}

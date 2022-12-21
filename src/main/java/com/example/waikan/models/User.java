@@ -42,11 +42,6 @@ public class User implements UserDetails {
     mappedBy = "user")
     private List<Product> products = new ArrayList<>();
 
-    public void addProductToUser(Product product) {
-        if (products == null) products = new ArrayList<>();
-        product.setUser(this);
-        products.add(product);
-    }
 
     public String getActivationCode() {
         return activationCode;
@@ -166,4 +161,78 @@ public class User implements UserDetails {
     public void setProducts(List<Product> products) {
         this.products = products;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    Приветствую!
+
+    Меня зовут Артём и я Java разработчик с опытом коммерческой разработки. Сразу скажу, что мне 16 лет, но пусть это не внушает Вам опасений.
+    В свои 16, я уже успел поработать в компании, делал код ре обучал людей и создавал свои собственные проекты
+     */
+
 }

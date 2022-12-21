@@ -51,6 +51,26 @@ public class ProductService {
         return outputStream.toByteArray();
     }
 
+    private byte[] compressBytes(byte[] data) {
+        Deflater deflater = new Deflater();
+        deflater.setInput(data);
+        deflater.finish();
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
+        byte[] buffer = new byte[1024];
+        while (!deflater.finished()) {
+            int count = deflater.deflate(buffer);
+            outputStream.write(buffer, 0, count);
+        }
+        try {
+            outputStream.close();
+        } catch (IOException e) {
+            log.error("Cannot compress Bytes");
+        }
+        System.out.println("Compressed Image Byte Size - "
+                + outputStream.toByteArray().length);
+        return outputStream.toByteArray();
+    }
+
     public List<Product> getAllProducts(String searchWord, String searchCity) {
         List<Product> products = productRepository.findAll();
         if (!searchWord.equals("") && !searchCity.equals("")) {
@@ -64,6 +84,11 @@ public class ProductService {
         }
         return products;
     }
+
+    public Product getProductById(Long id) {
+        return productRepository.findById(id).orElse(null);
+    }
+
 
     private List<Product> searchBySearchWord(String searchWord, List<Product> products) {
         List<Product> searchProducts = new ArrayList<>();
@@ -135,8 +160,7 @@ public class ProductService {
         log.info("Saving new Product. Name: {}, Description: {}, Author: {}",
                 product.getName(), product.getDescription(), product.getUser().getNikName());
         Product productFromDb = productRepository.save(product);
-        productFromDb.setPreviewImageId(productFromDb.getImages().get(0).getId());
-
+        product.setPreviewImageId(productFromDb.getImages().get(0).getId());
         productRepository.save(product);
     }
 
@@ -147,25 +171,6 @@ public class ProductService {
         return image;
     }
 
-    private byte[] compressBytes(byte[] data) {
-        Deflater deflater = new Deflater();
-        deflater.setInput(data);
-        deflater.finish();
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
-        byte[] buffer = new byte[1024];
-        while (!deflater.finished()) {
-            int count = deflater.deflate(buffer);
-            outputStream.write(buffer, 0, count);
-        }
-        try {
-            outputStream.close();
-        } catch (IOException e) {
-            log.error("Cannot compress Bytes");
-        }
-        System.out.println("Compressed Image Byte Size - "
-                + outputStream.toByteArray().length);
-        return outputStream.toByteArray();
-    }
 
     public List<Product> getProductsByUserId(Long userId) {
         return productRepository.getProductsByUserId(userId);

@@ -2,7 +2,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a href="/">
-                <span class="navbar-brand mb-0 h1">Waikan</span>
+                <span class="navbar-brand mb-0 h1">BUYSELL</span>
             </a>
             <#if user.email??>
                 <div class="dropdown text-end">
