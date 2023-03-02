@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <style>
+        *{
+            background-color: #171818;
+        }
+        h2, h3{
+            /*text-align: center;*/
+            color: #868786;
+        }
+
+        .btn{
+            border: none;
+            border-radius: 5px;
+            color: #868786;
+            background-color: #373838;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0.375rem 4.25rem;
+            line-height: 1.5;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<form action="/auth/login" method="get" style="text-align: center">
+    <h2> Successfully Registration!</h2>
+     <h3>Now you must be login</h3>
+
+    <input class="btn" type="submit" value="To Login">
+</form>
+</body>
+</html>

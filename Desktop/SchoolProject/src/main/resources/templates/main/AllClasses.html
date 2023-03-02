@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Classes</title>
+</head>
+<body>
+Выберите класс
+<div th:each="student : ${students}">
+    <a th:href="@{/students/{id}(id=${student.getId()})}" th:text="${student.getClassName()} "></a>
+</div>
+<hr>
+
+<form action="/students/add" method="get">
+    <input type="submit" value="Add New Students">
+</form>
+</body>
+</html>

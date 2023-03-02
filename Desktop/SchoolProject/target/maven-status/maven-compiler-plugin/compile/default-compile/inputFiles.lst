@@ -1,0 +1,15 @@
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/services/RegistrationService.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/repository/PeopleRepository.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/model/Administration.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/FirstSecurityAppApplication.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/util/PersonValidator.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/model/Book.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/services/StudentService.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/model/Student.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/controllers/MainPageController.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/repository/StudentsRepository.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/controllers/StudentController.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/controllers/AuthController.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/services/PersonDetailsService.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/config/SecurityConfig.java
+/Users/dora/Desktop/SchoolProject/src/main/java/ru/connor/FirstSecurityApp/security/PersonDetails.java

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <style>
+        *{
+            background-color: #171818;
+        }
+        h2{
+            /*text-align: center;*/
+            color: #868786;
+        }
+
+        .btn{
+            border: none;
+            border-radius: 5px;
+            color: #868786;
+            background-color: #373838;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0.375rem 4.25rem;
+            line-height: 1.5;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<form th:action="@{/choiceBooksOrStudents}" th:method="GET" style="text-align: center">
+    <input class="btn" type="submit" value="Get Started!">
+</form>
+<br>
+<br>
+<form th:action="@{/logout}" th:method="POST" style="text-align: center">
+    <h2> Successfully Login!</h2>
+
+    <input class="btn" type="submit" value="Logout">
+</form>
+</body>
+</html>
